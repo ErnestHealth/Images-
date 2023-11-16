@@ -1,7 +1,7 @@
 #Variables creating local folder and download .ico file
 $LocalIconFolderPath = "C:\URLIcon"
-$SourceIcon = "http://nickydewestelinck.be/wp-content/icons/salesforce.ico"
-$DestinationIcon = "C:\URLIcon\salesforce.ico"
+$SourceIcon = "https://raw.githubusercontent.com/ErnestHealth/Images-/main/Citrix.ico"
+$DestinationIcon = "C:\URLIcon\Citrix.ico"
 
 
 #Step 1 - Create a folder to place the URL icon
@@ -13,8 +13,77 @@ curl $SourceIcon -o $DestinationIcon
 #Step 3 - Add the custom URL shortcut to your Desktop with custom icon
 $new_object = New-Object -ComObject WScript.Shell
 $destination = $new_object.SpecialFolders.Item('AllUsersDesktop')
-$source_path = Join-Path -Path $destination -ChildPath '\\Salesforce.lnk'
+$source_path = Join-Path -Path $destination -ChildPath '\\Citrix.lnk'
 $source = $new_object.CreateShortcut($source_path)
-$source.TargetPath = 'https://login.salesforce.com'
-$source.IconLocation = ”C:\URLIcon\salesforce.ico”
+$source.TargetPath = 'https://go.ernesthealth.com'
+$source.IconLocation = ”C:\URLIcon\Citrix.ico”
+$source.Save()
+
+###########################
+
+#Variables creating local folder and download .ico file
+$LocalIconFolderPath = "C:\URLIcon1"
+$SourceIcon = "https://raw.githubusercontent.com/ErnestHealth/Images-/main/Ivanti.ico"
+$DestinationIcon = "C:\URLIcon1\Ivanti.ico"
+
+
+#Step 1 - Create a folder to place the URL icon
+New-Item $LocalIconFolderPath -Type Directory
+
+#Step 2 - Download a ICO file from a website into previous created folder
+curl $SourceIcon -o $DestinationIcon
+
+#Step 3 - Add the custom URL shortcut to your Desktop with custom icon
+$new_object = New-Object -ComObject WScript.Shell
+$destination = $new_object.SpecialFolders.Item('AllUsersDesktop')
+$source_path = Join-Path -Path $destination -ChildPath '\\Ivanti.lnk'
+$source = $new_object.CreateShortcut($source_path)
+$source.TargetPath = 'https://ernesthealth-amc.ivanticloud.com'
+$source.IconLocation = ”C:\URLIcon1\Ivanti.ico”
+$source.Save()
+
+###################
+
+#Variables creating local folder and download .ico file
+$LocalIconFolderPath = "C:\URLIcon2"
+$SourceIcon = "https://raw.githubusercontent.com/ErnestHealth/Images-/main/UltiPro.ico"
+$DestinationIcon = "C:\URLIcon2\UltiPro.ico"
+
+
+#Step 1 - Create a folder to place the URL icon
+New-Item $LocalIconFolderPath -Type Directory
+
+#Step 2 - Download a ICO file from a website into previous created folder
+curl $SourceIcon -o $DestinationIcon
+
+#Step 3 - Add the custom URL shortcut to your Desktop with custom icon
+$new_object = New-Object -ComObject WScript.Shell
+$destination = $new_object.SpecialFolders.Item('AllUsersDesktop')
+$source_path = Join-Path -Path $destination -ChildPath '\\UltiPro.lnk'
+$source = $new_object.CreateShortcut($source_path)
+$source.TargetPath = 'https://e44.ultipro.com/Login.aspx?ReturnUrl=%2fpages%2futility%2fcompanyselector.aspx'
+$source.IconLocation = ”C:\URLIcon2\UltiPro.ico”
+$source.Save()
+
+######################
+
+#Variables creating local folder and download .ico file
+$LocalIconFolderPath = "C:\URLIcon3"
+$SourceIcon = "https://raw.githubusercontent.com/ErnestHealth/Images-/main/Wellsky.ico"
+$DestinationIcon = "C:\URLIcon3\Wellsky.ico"
+
+
+#Step 1 - Create a folder to place the URL icon
+New-Item $LocalIconFolderPath -Type Directory
+
+#Step 2 - Download a ICO file from a website into previous created folder
+curl $SourceIcon -o $DestinationIcon
+
+#Step 3 - Add the custom URL shortcut to your Desktop with custom icon
+$new_object = New-Object -ComObject WScript.Shell
+$destination = $new_object.SpecialFolders.Item('AllUsersDesktop')
+$source_path = Join-Path -Path $destination -ChildPath '\\Wellsky.lnk'
+$source = $new_object.CreateShortcut($source_path)
+$source.TargetPath = 'https://wellsky.vnehealth.com/Interactant/'
+$source.IconLocation = ”C:\URLIcon3\Wellsky.ico”
 $source.Save()
