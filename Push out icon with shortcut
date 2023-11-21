@@ -82,7 +82,7 @@ curl $SourceIcon -o $DestinationIcon
 #Step 3 - Add the custom URL shortcut to your Desktop with custom icon
 $new_object = New-Object -ComObject WScript.Shell
 $destination = $new_object.SpecialFolders.Item('AllUsersDesktop')
-$source_path = Join-Path -Path $destination -ChildPath '\\Wellsky.lnk'
+$source_path = Join-Path -Path $destination -ChildPath '\\Wellsky Ernest.lnk'
 $source = $new_object.CreateShortcut($source_path)
 $source.TargetPath = 'https://wellsky.vnehealth.com/Interactant/'
 $source.IconLocation = ”C:\URLIcon3\Wellsky.ico”
