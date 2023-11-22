@@ -3,8 +3,8 @@ New-Item HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\PersonalizationCSP -For
 
 #Variable Creation
 $RegPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\PersonalizationCSP"
-$BackgroundImageURL = 'https://raw.githubusercontent.com/ErnestHealth/Images-/main/Ernest-Background.ico'
-$LockscreenImageURL = 'https://raw.githubusercontent.com/ErnestHealth/Images-/main/Ernest-Background.ico'
+$BackgroundImageURL = 'https://github.com/ErnestHealth/Images-/blob/main/Ernest%20Background%20test%201920x1080.png'
+$LockscreenImageURL = 'https://github.com/ErnestHealth/Images-/blob/main/Ernest%20Background%20test%201920x1080.png'
 $ImageDestinationFolder = "c:\intune"
 $Backgroundimage = "$ImageDestinationFolder\background.jpg"
 $LockScreenImage = "$ImageDestinationFolder\LockScreen.jpg"
