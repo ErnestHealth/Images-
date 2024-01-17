@@ -122,5 +122,5 @@ $destination = $new_object.SpecialFolders.Item('AllUsersDesktop')
 $source_path = Join-Path -Path $destination -ChildPath '\\AIROS.lnk'
 $source = $new_object.CreateShortcut($source_path)
 $source.TargetPath = 'Rds-Vibra.Kodiaksys.com'
-$source.IconLocation = ”C:\URLIcon\Citrix.ico”
+$source.IconLocation = ”C:\URLIcon\AIROSico”
 $source.Save()
